@@ -7,7 +7,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-let assertEqual = function(arr1, arr2) {
+let assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1,arr2)) {
     console.log(`Assertion Passed: ${arr1} === ${arr2}!`);
   } else {
@@ -15,4 +15,4 @@ let assertEqual = function(arr1, arr2) {
   }
 };
 
-assertEqual([5,4,2],[5,4,2])
+assertArraysEqual([5,4,2],[5,4,2])

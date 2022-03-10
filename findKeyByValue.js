@@ -9,9 +9,8 @@ let assertEqual = function(actual, expected) {
 let findKeyByValue = function(object, value) {
   let objKeys = Object.keys(object);
   let index = 0;
-  let currentKey = objKeys[index];
   for (let key of objKeys) {
-    if (object[currentKey] === value) {
+    if (object[objKeys[index]] === value) {
       return currentKey;
     } else {
       index++;

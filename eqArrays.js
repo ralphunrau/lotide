@@ -6,7 +6,10 @@ let assertEqual = function(actual, expected) {
   }
 };
 
-function eqArrays(arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
   for (let x = 0; x < arr1.length; x++) {
     if (arr1[x] !== arr2[x]) {
       return false;
@@ -14,8 +17,3 @@ function eqArrays(arr1, arr2) {
   }
   return true;
 }
-
-console.log(eqArrays([1, 2, 3], [1, 2, 3]));
-console.log(eqArrays([1, 2, 3], [3, 2, 1]));
-
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);

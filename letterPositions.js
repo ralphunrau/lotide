@@ -36,4 +36,3 @@ function assertArraysEqual(arr1, arr2) {
   }
 };
 
-assertArraysEqual(letterPositions("hello").o, [4]);

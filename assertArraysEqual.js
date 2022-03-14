@@ -1,4 +1,4 @@
-function eqArrays(arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   for (let x = 0; x < arr1.length; x++) {
     if (arr1[x] !== arr2[x]) {
       return false;
@@ -7,7 +7,7 @@ function eqArrays(arr1, arr2) {
   return true;
 }
 
-let assertArraysEqual = function(arr1, arr2) {
+const assertArraysEqual = function(arr1, arr2) {
   if (eqArrays(arr1,arr2)) {
     console.log(`Assertion Passed: ${arr1} === ${arr2}!`);
   } else {
@@ -15,4 +15,4 @@ let assertArraysEqual = function(arr1, arr2) {
   }
 };
 
-assertArraysEqual([5,4,2],[5,4,2])
+module.exports = assertArraysEqual;

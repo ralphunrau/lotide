@@ -6,5 +6,5 @@ let assertEqual = function(actual, expected) {
   }
 };
 
-assertEqual("hectic", "hectix");
-assertEqual(1,1);
+
+module.exports = assertEqual;

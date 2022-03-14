@@ -1,6 +1,4 @@
-let password = process.argv.slice(2);
-
-function obfuscate(str) {
+const flatten = function(str) {
   let newPassword = '';
   let password = str[0];
   for (let x = 0; x < password.length; x++) {
@@ -23,5 +21,4 @@ function obfuscate(str) {
   }
   return newPassword;
 }
-
-console.log(obfuscate(password));
+module.exports = flatten;

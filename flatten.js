@@ -1,8 +1,7 @@
 const flatten = function(str) {
   let newPassword = '';
-  let password = str[0];
-  for (let x = 0; x < password.length; x++) {
-    switch(password[x]) {
+  for (let x = 0; x < str.length; x++) {
+    switch(str[x]) {
       case 'a':
         newPassword += '4';
         break;
@@ -16,7 +15,7 @@ const flatten = function(str) {
         newPassword +='1';
         break;
       default:
-        newPassword += password[x];
+        newPassword += str[x];
     }
   }
   return newPassword;

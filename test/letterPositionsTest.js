@@ -1,0 +1,13 @@
+const assert = require('chai').assert;
+const letterPositions = require('../letterPositions')
+
+describe('letterPositions', () => {
+  it('returns { h: [ 0 ], e: [ 1 ], l: [ 2, 3 ], o: [ 4 ] } for "hello"', () => {
+    assert.deepEqual(letterPositions('hello'), { h: [ 0 ], e: [ 1 ], l: [ 2, 3 ], o: [ 4 ] })
+  });
+
+  it('returns { k: [ 0 ], i: [ 1 ], l: [ 2, 3 ], e: [ 4 ], r: [ 5 ]} for "killer"', () => {
+    assert.deepEqual(letterPositions('killer'), { k: [ 0 ], i: [ 1 ], l: [ 2, 3 ], e: [ 4 ], r: [ 5 ]})
+  });
+
+});
